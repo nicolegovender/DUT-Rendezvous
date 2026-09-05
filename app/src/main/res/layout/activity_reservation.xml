@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/txtSRequests"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvMakeReservation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_purple"
+        android:fontFamily="cursive"
+        android:text="Make a Reservation"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/txtReserveFullName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="?android:attr/listPreferredItemPaddingStart"
+        android:ems="10"
+        android:fontFamily="serif"
+        android:hint="Full Name"
+        android:inputType="text"
+        android:textAlignment="viewStart"
+        android:textStyle="italic" />
+
+    <EditText
+        android:id="@+id/txtDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="?android:attr/listPreferredItemPaddingStart"
+        android:ems="10"
+        android:fontFamily="serif"
+        android:hint="Date"
+        android:inputType="date"
+        android:textStyle="italic" />
+
+    <EditText
+        android:id="@+id/txtTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="?android:attr/listPreferredItemPaddingStart"
+        android:ems="10"
+        android:fontFamily="serif"
+        android:hint="Time"
+        android:inputType="time"
+        android:textStyle="italic" />
+
+    <EditText
+        android:id="@+id/txtNumOfGuests"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="?android:attr/listPreferredItemPaddingStart"
+        android:ems="10"
+        android:fontFamily="serif"
+        android:hint="Number of Guests"
+        android:inputType="number"
+        android:textStyle="italic" />
+
+    <EditText
+        android:id="@+id/txtRequests"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="?android:attr/listPreferredItemPaddingStart"
+        android:ems="10"
+        android:fontFamily="serif"
+        android:gravity="start|top"
+        android:hint="Any special requests?"
+        android:inputType="textMultiLine"
+        android:textStyle="italic" />
+
+    <Button
+        android:id="@+id/btnReserveTable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="?android:attr/listPreferredItemPaddingEnd"
+        android:background="@android:color/holo_purple"
+        android:text="Reserve Table" />
+
+</LinearLayout>
