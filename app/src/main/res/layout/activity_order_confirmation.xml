@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF">
@@ -38,8 +39,9 @@
             android:gravity="center"
             android:layout_marginBottom="32dp"/>
 
-        <!-- Order Details Box -->
+        <!-- Order Details Box (ADDED IDS HERE) -->
         <TextView
+            android:id="@+id/tvOrderId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Order ID: #ORD1025"
@@ -48,14 +50,16 @@
             android:layout_marginBottom="4dp"/>
 
         <TextView
+            android:id="@+id/tvPickupTime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Pickup Time: 01 October 2026, 14:30"
             android:textSize="14sp"
             android:layout_marginBottom="32dp"/>
 
-        <!-- View Orders Button -->
+        <!-- View Orders Button (ADDED ID HERE) -->
         <Button
+            android:id="@+id/btnViewOrders"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:text="View My Orders"
@@ -63,8 +67,9 @@
             android:backgroundTint="#3F2B7B"
             android:layout_marginBottom="16dp"/>
 
-        <!-- Back to Home Link -->
+        <!-- Back to Home Link (ADDED ID HERE) -->
         <TextView
+            android:id="@+id/tvBackHome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Back to Home"

@@ -44,7 +44,9 @@
             android:padding="24dp"
             android:layout_marginTop="20dp">
 
+            <!-- ADDED ID HERE -->
             <EditText
+                android:id="@+id/etStaffEmail"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:hint="Email"
@@ -59,7 +61,9 @@
                 android:layout_height="50dp"
                 android:layout_marginBottom="16dp">
 
+                <!-- ADDED ID HERE -->
                 <EditText
+                    android:id="@+id/etStaffPassword"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:hint="Password"
@@ -79,12 +83,15 @@
             </RelativeLayout>
 
             <CheckBox
+                android:id="@+id/cbRememberMe"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Remember me"
                 android:layout_marginBottom="24dp"/>
 
+            <!-- ADDED ID HERE -->
             <Button
+                android:id="@+id/btnStaffLogin"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:text="Login"

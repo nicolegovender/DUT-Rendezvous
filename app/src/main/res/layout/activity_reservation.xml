@@ -40,7 +40,7 @@
             android:layout_centerVertical="true"/>
     </RelativeLayout>
 
-    <!-- Filter Tabs -->
+    <!-- Filter Tabs (Added IDs here) -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -49,6 +49,7 @@
         android:background="#FFFFFF">
 
         <TextView
+            android:id="@+id/tvResFilterAll"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="All"
@@ -56,6 +57,7 @@
             android:layout_marginEnd="16dp"/>
 
         <TextView
+            android:id="@+id/tvResFilterToday"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Today"
@@ -66,6 +68,7 @@
             android:layout_marginEnd="16dp"/>
 
         <TextView
+            android:id="@+id/tvResFilterUpcoming"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Upcoming"

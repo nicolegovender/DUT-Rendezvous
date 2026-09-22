@@ -23,6 +23,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!-- Confirmation Screens -->
+        <activity android:name=".ConfirmationOrderActivity" />
+        <activity android:name=".ConfirmationReservationActivity" />
+
+        <!-- Staff Screens -->
+        <activity android:name=".StaffLoginActivity" />
+        <activity android:name=".AdminDashboardActivity" />
+        <activity android:name=".StaffOrdersActivity" />
+        <activity android:name=".StaffReservationsActivity" />
+
+        <!-- About Screen -->
+        <activity android:name=".AboutActivity" />
     </application>
 
 </manifest>

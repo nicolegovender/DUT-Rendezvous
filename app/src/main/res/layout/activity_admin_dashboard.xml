@@ -49,14 +49,17 @@
         android:rowCount="2"
         android:padding="16dp">
 
-        <!-- Item 1 -->
+        <!-- Item 1: Today's Orders (ID added) -->
         <LinearLayout
+            android:id="@+id/cardTodaysOrders"
             android:layout_width="0dp"
             android:layout_height="120dp"
             android:layout_columnWeight="1"
             android:layout_margin="8dp"
             android:orientation="vertical"
             android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
             android:background="#FFFFFF">
             <ImageView
                 android:layout_width="40dp"
@@ -69,14 +72,17 @@
                 android:layout_marginTop="8dp"/>
         </LinearLayout>
 
-        <!-- Item 2 -->
+        <!-- Item 2: Today's Reservations (ID added) -->
         <LinearLayout
+            android:id="@+id/cardTodaysReservations"
             android:layout_width="0dp"
             android:layout_height="120dp"
             android:layout_columnWeight="1"
             android:layout_margin="8dp"
             android:orientation="vertical"
             android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
             android:background="#FFFFFF">
             <ImageView
                 android:layout_width="40dp"
@@ -89,14 +95,17 @@
                 android:layout_marginTop="8dp"/>
         </LinearLayout>
 
-        <!-- Item 3 -->
+        <!-- Item 3: Menu Items (ID added) -->
         <LinearLayout
+            android:id="@+id/cardMenuItems"
             android:layout_width="0dp"
             android:layout_height="120dp"
             android:layout_columnWeight="1"
             android:layout_margin="8dp"
             android:orientation="vertical"
             android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
             android:background="#FFFFFF">
             <ImageView
                 android:layout_width="40dp"
@@ -109,14 +118,17 @@
                 android:layout_marginTop="8dp"/>
         </LinearLayout>
 
-        <!-- Item 4 -->
+        <!-- Item 4: Low Stock Items (ID added) -->
         <LinearLayout
+            android:id="@+id/cardLowStock"
             android:layout_width="0dp"
             android:layout_height="120dp"
             android:layout_columnWeight="1"
             android:layout_margin="8dp"
             android:orientation="vertical"
             android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
             android:background="#FFFFFF">
             <ImageView
                 android:layout_width="40dp"
@@ -137,30 +149,42 @@
         android:orientation="vertical"
         android:padding="16dp">
 
+        <!-- ID added -->
         <TextView
+            android:id="@+id/tvMenuOrders"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:text="Orders  >"
             android:gravity="center_vertical"
             android:paddingStart="16dp"
+            android:clickable="true"
+            android:focusable="true"
             android:background="#FFFFFF"
             android:layout_marginBottom="8dp"/>
 
+        <!-- ID added -->
         <TextView
+            android:id="@+id/tvMenuReservations"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:text="Reservations  >"
             android:gravity="center_vertical"
             android:paddingStart="16dp"
+            android:clickable="true"
+            android:focusable="true"
             android:background="#FFFFFF"
             android:layout_marginBottom="8dp"/>
 
+        <!-- ID added -->
         <TextView
+            android:id="@+id/tvMenuLogout"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:text="Logout  >"
             android:gravity="center_vertical"
             android:paddingStart="16dp"
+            android:clickable="true"
+            android:focusable="true"
             android:background="#FFFFFF"/>
     </LinearLayout>
 </LinearLayout>

@@ -13,7 +13,7 @@
         android:gravity="center_horizontal"
         android:padding="24dp">
 
-        <!-- 1. Circular Green Checkmark Background (Replaced CardView with LinearLayout) -->
+        <!-- 1. Circular Green Checkmark Background -->
         <LinearLayout
             android:layout_width="120dp"
             android:layout_height="120dp"
@@ -22,7 +22,6 @@
             android:layout_marginTop="60dp"
             android:layout_marginBottom="24dp">
 
-            <!-- The Checkmark Icon -->
             <ImageView
                 android:layout_width="60dp"
                 android:layout_height="60dp"
@@ -49,8 +48,9 @@
             android:gravity="center"
             android:layout_marginBottom="32dp"/>
 
-        <!-- 3. Reservation Details -->
+        <!-- 3. Reservation Details (ADDED IDs HERE) -->
         <TextView
+            android:id="@+id/tvReservationId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Reservation ID: #RES2034"
@@ -60,23 +60,18 @@
             android:layout_marginBottom="4dp"/>
 
         <TextView
+            android:id="@+id/tvReservationDetails"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Date &amp; Time: 24 May 2025, 19:00"
+            android:text="Date &amp; Time: 24 May 2025, 19:00\nGuests: 4"
             android:textSize="14sp"
             android:textColor="#666666"
-            android:layout_marginBottom="4dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Guests: 4"
-            android:textSize="14sp"
-            android:textColor="#666666"
+            android:gravity="center"
             android:layout_marginBottom="40dp"/>
 
-        <!-- 4. View My Reservations Button (Dark Purple) -->
+        <!-- 4. View My Reservations Button (ADDED ID HERE) -->
         <Button
+            android:id="@+id/btnViewReservations"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:text="View My Reservations"
@@ -86,13 +81,16 @@
             android:backgroundTint="#3F2B7B"
             android:layout_marginBottom="24dp"/>
 
-        <!-- 5. Back to Home Link (With small house icon) -->
+        <!-- 5. Back to Home Link (ADDED ID HERE) -->
         <LinearLayout
+            android:id="@+id/btnBackHomeRes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical"
-            android:padding="10dp">
+            android:padding="10dp"
+            android:clickable="true"
+            android:focusable="true">
 
             <!-- Small House Icon -->
             <ImageView
