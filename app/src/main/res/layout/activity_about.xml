@@ -82,7 +82,7 @@
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:src="@android:drawable/ic_menu_my_favorites"
+            android:src="@android:drawable/btn_star"
             app:tint="#4CAF50"
             android:contentDescription="Heart Icon"/>
 

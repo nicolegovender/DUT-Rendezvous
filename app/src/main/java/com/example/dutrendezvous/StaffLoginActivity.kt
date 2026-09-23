@@ -12,7 +12,7 @@ class StaffLoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_staff_login) // Matches your XML file name
+        setContentView(R.layout.staff_login) // Matches your XML file name
 
         // 1. Connect Kotlin variables to the XML views using the IDs you just added
         val etEmail = findViewById<EditText>(R.id.etStaffEmail)
