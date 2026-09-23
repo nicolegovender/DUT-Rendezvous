@@ -1,5 +1,6 @@
 package com.example.dutrendezvous
 import android.content.Intent
+import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.ListView
@@ -50,11 +51,7 @@ class CartActivity : AppCompatActivity() {
                 this@CartActivity, "Proceeding to checkout...", Toast.LENGTH_SHORT
             ).show()
 
-            val cartButton = findViewById<Button>(R.id.btnCartButton)
-            cartButton.setOnClickListener {
-                val intent = Intent(this, CartActivity::class.java)
-                startActivity(intent)
-            }
+
         }
     }
 }
