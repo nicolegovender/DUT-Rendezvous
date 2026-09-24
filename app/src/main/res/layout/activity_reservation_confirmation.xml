@@ -14,22 +14,27 @@
         android:padding="24dp">
 
         <!-- 1. Circular Green Checkmark Background -->
-        <LinearLayout
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-
-            android:gravity="center"
-            android:layout_marginTop="60dp"
-            android:layout_marginBottom="24dp">
-
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:src="@android:drawable/checkbox_on_background"
-                app:tint="#4CAF50" />
-        </LinearLayout>
 
         <!-- 2. Main Headings -->
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="169dp"
+
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="24dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:layout_marginBottom="20dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="Checkmark"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/checkmark" />
+        </LinearLayout>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -19,7 +19,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         startActivity(
-            Intent(this, StaffLoginActivity::class.java)
+            Intent(this, ConfirmationOrderActivity::class.java)
         )
 
         finish()

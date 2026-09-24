@@ -4,13 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#F5F5F5">
+    android:background="#F8F9FC">
 
     <!-- 1. TOP HEADER -->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="#3F2B7B"
+        android:background="#4B2E83"
         android:padding="16dp">
 
         <ImageView
@@ -62,9 +62,11 @@
             android:focusable="true"
             android:background="#FFFFFF">
             <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@android:drawable/ic_menu_agenda"/>
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/todaysorder"/>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -85,9 +87,9 @@
             android:focusable="true"
             android:background="#FFFFFF">
             <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@android:drawable/ic_menu_my_calendar"/>
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:src="@drawable/todayreserve"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -108,9 +110,9 @@
             android:focusable="true"
             android:background="#FFFFFF">
             <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@android:drawable/ic_menu_edit"/>
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/menuitems"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -131,9 +133,9 @@
             android:focusable="true"
             android:background="#FFFFFF">
             <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@android:drawable/ic_menu_gallery"/>
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/lowstock"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -153,38 +155,53 @@
         <TextView
             android:id="@+id/tvMenuOrders"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="Orders  >"
+            android:layout_height="56dp"
+            android:text="📦 View Orders"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
             android:gravity="center_vertical"
-            android:paddingStart="16dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
             android:clickable="true"
             android:focusable="true"
+            android:layout_marginBottom="12dp"
             android:background="#FFFFFF"
-            android:layout_marginBottom="8dp"/>
+            android:elevation="6dp" />
 
         <!-- ID added -->
         <TextView
             android:id="@+id/tvMenuReservations"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="Reservations  >"
+            android:layout_height="56dp"
+            android:text="📅 View Reservations"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
             android:gravity="center_vertical"
-            android:paddingStart="16dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
             android:clickable="true"
             android:focusable="true"
+            android:layout_marginBottom="12dp"
             android:background="#FFFFFF"
-            android:layout_marginBottom="8dp"/>
+            android:elevation="6dp" />
 
         <!-- ID added -->
         <TextView
             android:id="@+id/tvMenuLogout"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="Logout  >"
+            android:layout_height="56dp"
+            android:text="🚪 Logout"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
             android:gravity="center_vertical"
-            android:paddingStart="16dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
             android:clickable="true"
             android:focusable="true"
-            android:background="#FFFFFF"/>
+            android:background="#FFFFFF"
+            android:elevation="6dp" />
     </LinearLayout>
 </LinearLayout>
