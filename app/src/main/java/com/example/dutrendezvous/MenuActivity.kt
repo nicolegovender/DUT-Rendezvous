@@ -1,18 +1,13 @@
 package com.example.dutrendezvous
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 
-class MainActivity : ComponentActivity() {
+class MenuActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        startActivity(
-            Intent(this, MenuActivity::class.java)
-        )
-
-        finish()
+        setContentView(R.layout.activity_menu)
     }
 }
