@@ -18,23 +18,43 @@ class LoginActivity : ComponentActivity() {
         val etEmail = findViewById<EditText>(R.id.txtLoginEmail)
         val etPassword = findViewById<EditText>(R.id.txtLoginPassword)
         val btnLogin = findViewById<Button>(R.id.btnLogin)
-        val tvRegisterLink = findViewById<TextView>(R.id.tvForgotPass)
 
-        val registeredEmail = intent.getStringExtra("REGISTERED_EMAIL")
-        val registeredPassword = intent.getStringExtra("REGISTERED_PASSWORD")
+        val tvForgotPass = findViewById<TextView>(R.id.tvForgotPass)
+        val tvRegisterLink = findViewById<TextView>(R.id.tvRegisterLink)
+
+        val registeredEmail =
+            intent.getStringExtra("REGISTERED_EMAIL")
+
+        val registeredPassword =
+            intent.getStringExtra("REGISTERED_PASSWORD")
 
         btnLogin.setOnClickListener {
-            val inputEmail = etEmail.text.toString()
-            val inputPassword = etPassword.text.toString()
 
-            if (inputEmail == registeredEmail &&
-                inputPassword == registeredPassword) {
+            val inputEmail =
+                etEmail.text.toString()
+
+            val inputPassword =
+                etPassword.text.toString()
+
+            if (
+                inputEmail == registeredEmail &&
+                inputPassword == registeredPassword
+            ) {
 
                 Toast.makeText(
                     this,
-                    "Login Successful! (Homepage coming soon)",
-                    Toast.LENGTH_LONG
+                    "Login Successful!",
+                    Toast.LENGTH_SHORT
                 ).show()
+
+                startActivity(
+                    Intent(
+                        this,
+                        HomepageActivity::class.java
+                    )
+                )
+
+                finish()
 
             } else {
 
@@ -47,10 +67,24 @@ class LoginActivity : ComponentActivity() {
         }
 
         tvRegisterLink.setOnClickListener {
+
             startActivity(
-                Intent(this, RegisterActivity::class.java)
+                Intent(
+                    this,
+                    RegisterActivity::class.java
+                )
             )
+
             finish()
+        }
+
+        tvForgotPass.setOnClickListener {
+
+            Toast.makeText(
+                this,
+                "Forgot Password feature coming soon",
+                Toast.LENGTH_SHORT
+            ).show()
         }
     }
 }
