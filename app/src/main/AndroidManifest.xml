@@ -45,6 +45,19 @@
             android:exported="false" />
 
         <activity
+            android:name=".ConfirmationOrderActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ReservationConfirmationActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".MyReservationsActivity"
+            android:exported="false" />
+
+
+        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"

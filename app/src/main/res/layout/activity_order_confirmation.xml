@@ -72,7 +72,7 @@
 
         <!-- Back to Home Link (ADDED ID HERE) -->
         <TextView
-            android:id="@+id/tvBackHome"
+            android:id="@+id/btnHome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Back to Home"

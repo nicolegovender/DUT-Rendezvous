@@ -20,20 +20,31 @@ class TakeawayActivity : ComponentActivity() {
 
         btnAddToOrder.setOnClickListener {
 
-            val selectedItem = spinner.selectedItem.toString()
-            val quantity = etQuantity.text.toString()
+            val selectedItem =
+                spinner.selectedItem.toString()
+
+            val quantity =
+                etQuantity.text.toString()
 
             if (quantity.isEmpty()) {
+
                 Toast.makeText(
                     this,
                     "Please enter a quantity",
                     Toast.LENGTH_SHORT
                 ).show()
+
             } else {
+
+                val orderItem =
+                    "$quantity x $selectedItem"
+
+                CartManager.cartItems.add(orderItem)
+
                 Toast.makeText(
                     this,
-                    "$quantity x $selectedItem added to order",
-                    Toast.LENGTH_LONG
+                    "$orderItem added to cart",
+                    Toast.LENGTH_SHORT
                 ).show()
             }
         }

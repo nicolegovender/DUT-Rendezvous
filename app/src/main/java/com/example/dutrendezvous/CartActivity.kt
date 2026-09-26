@@ -19,32 +19,34 @@ class CartActivity : ComponentActivity() {
 
         setContentView(R.layout.activity_cart)
 
-        listViewCartItems = findViewById(R.id.listViewCartItems)
-        textViewTotal = findViewById(R.id.tvCartTotal)
-        buttonCheckout = findViewById(R.id.btnCartCheckout)
+        listViewCartItems =
+            findViewById(R.id.listViewCartItems)
 
-        val cartItems = arrayOf(
-            "Item 1",
-            "Item 2",
-            "Item 3"
-        )
+        textViewTotal =
+            findViewById(R.id.tvCartTotal)
+
+        buttonCheckout =
+            findViewById(R.id.btnCartCheckout)
 
         val adapter = ArrayAdapter(
             this,
             android.R.layout.simple_list_item_1,
-            cartItems
+            CartManager.cartItems
         )
 
         listViewCartItems.adapter = adapter
 
-        textViewTotal.text = "TOTAL: R0.00"
+        textViewTotal.text =
+            "Items in Cart: ${CartManager.cartItems.size}"
 
         buttonCheckout.setOnClickListener {
-            Toast.makeText(
-                this,
-                "Proceeding to checkout...",
-                Toast.LENGTH_SHORT
-            ).show()
+
+            startActivity(
+                android.content.Intent(
+                    this,
+                    ConfirmationOrderActivity::class.java
+                )
+            )
+        }
         }
     }
-}
