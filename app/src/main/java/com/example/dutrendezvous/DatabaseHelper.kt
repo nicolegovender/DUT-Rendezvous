@@ -125,4 +125,24 @@ class DatabaseHelper(context: Context) :
 
         return result != -1L
     }
+
+    fun checkUser(
+        email: String,
+        password: String
+    ): Boolean {
+
+        val db = readableDatabase
+
+        val cursor = db.rawQuery(
+            "SELECT * FROM Users WHERE email=? AND password=?",
+            arrayOf(email, password)
+        )
+
+        val exists = cursor.count > 0
+
+        cursor.close()
+        db.close()
+
+        return exists
+    }
 }
