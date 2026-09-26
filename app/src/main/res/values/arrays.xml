@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string-array name="takeaway_menu_items">
+    <item>Select an item...</item>
+    <item>Zesty Lemon Bake - R25.00</item>
+    <item>Carrot Cake - R30.00</item>
+    <item>Chocolate Cake - R30.00</item>
+    <item>Cheese &amp; Tomato Sandwich - R35.00</item>
+    <item>Chicken Mayo Sandwich - R40.00</item>
+    <item>Spicy Chips Sandwich - R30.00</item>
+    <item>Beef Pizza with Salad - R55.00</item>
+    <item>Plant based Taco Wrap with Chips - R45.00</item>
+    <item>Chicken Breast with Mash &amp; salad - R25.00</item>
+    <item> Vegeterian Lasagna with Salad - R45.00</item>
+    <item>Still Water - R14.00</item>
+    <item>Coke - R18.00</item>
+    <item>Fanta - R18.00</item>
+    <item>Sprite - R18.00</item>
+    <item>Apple juice - R18.00</item>
+    <item>Mango juice - R18.00</item>
+    <item>Choc Milkshake-R40.00</item>
+    <item>Strawberry Milkshake-R40.00</item>
+    <item> Lime Milkshake - R40.00</item>
+    <item>Sparkling Water - R14.00</item>
+    <item>Still water-R14.00</item>
+    <item>Tea - R16.00</item>
+    <item>Expresso - R15.00</item>
+    <item>Coffee - R15.00</item>
+
+</string-array>
+</resources>
