@@ -10,7 +10,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         startActivity(
-            Intent(this, HomepageActivity::class.java)
+            Intent(this, RegisterActivity::class.java)
         )
 
         finish()
