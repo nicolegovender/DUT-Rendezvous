@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:background="#3F2B7B"
+            android:gravity="center"
+            android:text="MY ACCOUNT"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:src="@drawable/watermarked_img_8898699070332212810"
+            android:scaleType="fitCenter" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Welcome to Your Account"
+            android:textAlignment="center"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+
+        <Button
+            android:id="@+id/btnMyOrders"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="16dp"
+            android:text="MY ORDERS" />
+
+        <Button
+            android:id="@+id/btnMyReservations"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="MY RESERVATIONS" />
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="16dp"
+            android:backgroundTint="#B71C1C"
+            android:text="LOGOUT"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</ScrollView>

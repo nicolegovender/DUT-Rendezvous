@@ -19,101 +19,36 @@
             android:textSize="30sp"
             android:textStyle="bold" />
 
-        <!-- Order 1 -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="220dp"
+            android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:background="#FFFFFF"
             android:elevation="8dp"
-            android:gravity="center_vertical"
             android:orientation="vertical"
             android:padding="20dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="#ORD1001"
+                android:text="CURRENT ORDER"
                 android:textSize="28sp"
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/tvOrderItems"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:text="2 x Burger"
+                android:layout_marginTop="20dp"
+                android:text="No orders yet"
                 android:textSize="22sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1 x Coke"
-                android:textSize="22sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Total: R150.00"
-                android:textSize="22sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="20dp"
                 android:text="CONFIRMED"
                 android:textColor="#4CAF50"
-                android:textSize="22sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <!-- Order 2 -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="220dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            android:background="#FFFFFF"
-            android:elevation="8dp"
-            android:gravity="center_vertical"
-            android:orientation="vertical"
-            android:padding="20dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="#ORD1002"
-                android:textSize="28sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:text="1 x Pizza"
-                android:textSize="22sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1 x Juice"
-                android:textSize="22sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Total: R120.00"
-                android:textSize="22sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:text="PREPARING"
-                android:textColor="#FF9800"
                 android:textSize="22sp"
                 android:textStyle="bold" />
 

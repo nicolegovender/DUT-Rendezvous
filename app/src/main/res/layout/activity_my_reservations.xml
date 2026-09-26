@@ -30,29 +30,33 @@
             android:padding="20dp">
 
             <TextView
+                android:id="@+id/tvResName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="#RES1001"
+                android:text="Customer Name"
                 android:textSize="28sp"
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/tvResDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                android:text="Date: 10 October 2026"
+                android:text="Date"
                 android:textSize="22sp" />
 
             <TextView
+                android:id="@+id/tvResTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Time: 19:00"
+                android:text="Time"
                 android:textSize="22sp" />
 
             <TextView
+                android:id="@+id/tvResGuests"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Guests: 4"
+                android:text="Guests"
                 android:textSize="22sp" />
 
             <TextView
@@ -63,54 +67,7 @@
                 android:textColor="#4CAF50"
                 android:textSize="22sp"
                 android:textStyle="bold" />
-        </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="220dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            android:background="#FFFFFF"
-            android:elevation="8dp"
-            android:gravity="center_vertical"
-            android:orientation="vertical"
-            android:padding="20dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="#RES1002"
-                android:textSize="28sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:text="Date: 20 October 2026"
-                android:textSize="22sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Time: 18:00"
-                android:textSize="22sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Guests: 2"
-                android:textSize="22sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:text="CONFIRMED"
-                android:textColor="#4CAF50"
-                android:textSize="22sp"
-                android:textStyle="bold" />
         </LinearLayout>
 
     </LinearLayout>

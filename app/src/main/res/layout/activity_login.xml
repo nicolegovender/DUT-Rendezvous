@@ -32,11 +32,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="?android:attr/listPreferredItemPaddingStart"
+        android:layout_marginEnd="?android:attr/listPreferredItemPaddingStart"
         android:ems="10"
         android:fontFamily="serif"
         android:hint="Password"
         android:inputType="textPassword"
-        android:textStyle="italic" />
+        android:textStyle="italic"
+        android:drawableEnd="@android:drawable/ic_menu_view" />
+
 
     <TextView
         android:id="@+id/tvForgotPass"

@@ -7,6 +7,8 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.ComponentActivity
+import android.text.method.HideReturnsTransformationMethod
+import android.text.method.PasswordTransformationMethod
 
 class LoginActivity : ComponentActivity() {
 
@@ -17,6 +19,41 @@ class LoginActivity : ComponentActivity() {
 
         val etEmail = findViewById<EditText>(R.id.txtLoginEmail)
         val etPassword = findViewById<EditText>(R.id.txtLoginPassword)
+        var passwordVisible = false
+
+        etPassword.setOnTouchListener { _, event ->
+
+            val drawableRight = 2
+
+            if (event.action == android.view.MotionEvent.ACTION_UP) {
+
+                if (event.rawX >= (etPassword.right -
+                            etPassword.compoundDrawables[drawableRight].bounds.width())
+                ) {
+
+                    passwordVisible = !passwordVisible
+
+                    if (passwordVisible) {
+
+                        etPassword.transformationMethod =
+                            HideReturnsTransformationMethod.getInstance()
+
+                    } else {
+
+                        etPassword.transformationMethod =
+                            PasswordTransformationMethod.getInstance()
+                    }
+
+                    etPassword.setSelection(
+                        etPassword.text.length
+                    )
+
+                    return@setOnTouchListener true
+                }
+            }
+
+            false
+        }
         val btnLogin = findViewById<Button>(R.id.btnLogin)
 
         val tvForgotPass = findViewById<TextView>(R.id.tvForgotPass)

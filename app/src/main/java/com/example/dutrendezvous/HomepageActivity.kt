@@ -2,9 +2,10 @@ package com.example.dutrendezvous
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
+import android.widget.TextView
 import androidx.activity.ComponentActivity
 import androidx.activity.enableEdgeToEdge
-import android.widget.Button
 
 class HomepageActivity : ComponentActivity() {
 
@@ -20,27 +21,56 @@ class HomepageActivity : ComponentActivity() {
         val btnReservation = findViewById<Button>(R.id.btnReservation)
         val btnCart = findViewById<Button>(R.id.btnCart)
 
+        val tvViewAccount =
+            findViewById<TextView>(R.id.tvViewAccount)
+
         btnMenu.setOnClickListener {
+
             startActivity(
-                Intent(this, MenuActivity::class.java)
+                Intent(
+                    this,
+                    MenuActivity::class.java
+                )
             )
         }
 
         btnTakeaway.setOnClickListener {
+
             startActivity(
-                Intent(this, TakeawayActivity::class.java)
+                Intent(
+                    this,
+                    TakeawayActivity::class.java
+                )
             )
         }
 
         btnReservation.setOnClickListener {
+
             startActivity(
-                Intent(this, ReservationActivity::class.java)
+                Intent(
+                    this,
+                    ReservationActivity::class.java
+                )
             )
         }
 
         btnCart.setOnClickListener {
+
             startActivity(
-                Intent(this, CartActivity::class.java)
+                Intent(
+                    this,
+                    CartActivity::class.java
+                )
+            )
+        }
+
+        tvViewAccount.setOnClickListener {
+
+            startActivity(
+                Intent(
+                    this,
+                    AccountActivity::class.java
+                )
             )
         }
     }

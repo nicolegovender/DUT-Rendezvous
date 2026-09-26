@@ -13,13 +13,6 @@
         android:background="#3F2B7B"
         android:padding="16dp">
 
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@android:drawable/ic_menu_sort_by_size"
-            app:tint="#FFFFFF"
-            android:contentDescription="Menu"
-            android:layout_centerVertical="true"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -30,14 +23,6 @@
             android:textStyle="bold"
             android:layout_centerInParent="true"/>
 
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@android:drawable/ic_menu_sort_by_size"
-            app:tint="#FFFFFF"
-            android:contentDescription="Filter"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"/>
     </RelativeLayout>
 
     <!-- Filter Tabs (Added IDs for click detection) -->
@@ -100,9 +85,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical">
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="#ORD1025" android:textStyle="bold"/>
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="John Smith" android:textSize="12sp"/>
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2 Items" android:textSize="12sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="#ORD001" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Nicole" android:textSize="12sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Water still x1,spicy chips x1" android:textSize="12sp"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -129,9 +114,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical">
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="#ORD1024" android:textStyle="bold"/>
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sarah Johnson" android:textSize="12sp"/>
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1 Item" android:textSize="12sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="#ORD002" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Kaila" android:textSize="12sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="chocolate cake x1" android:textSize="12sp"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -158,9 +143,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical">
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="#ORD1023" android:textStyle="bold"/>
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mike Brown" android:textSize="12sp"/>
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="3 Items" android:textSize="12sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="#ORD003" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Alwande" android:textSize="12sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="chicken and mayo sandich x1, coke x1" android:textSize="12sp"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -168,7 +153,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:gravity="end">
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="16:30"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="13:30"/>
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pending" android:textColor="#4CAF50"/>
                 </LinearLayout>
             </LinearLayout>
@@ -187,9 +172,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical">
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="#ORD1022" android:textStyle="bold"/>
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Emily Davis" android:textSize="12sp"/>
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2 Items" android:textSize="12sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="#ORD004" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Halle" android:textSize="12sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Beef pizza x1, fanta x1" android:textSize="12sp"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -197,7 +182,11 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:gravity="end">
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="17:00"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="14dp"
+                        android:text="14:00" />
                     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Completed" android:textColor="#666666"/>
                 </LinearLayout>
             </LinearLayout>
@@ -216,9 +205,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical">
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="#ORD1021" android:textStyle="bold"/>
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="James Wilson" android:textSize="12sp"/>
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2 Items" android:textSize="12sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="#ORD005" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Amanda" android:textSize="12sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="spicy chips x2" android:textSize="12sp"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -226,7 +215,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:gravity="end">
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="18:00"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="12:00"/>
                     <TextView android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Completed"

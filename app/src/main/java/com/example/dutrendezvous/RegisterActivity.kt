@@ -43,6 +43,27 @@ class RegisterActivity : ComponentActivity() {
                 return@setOnClickListener
             }
 
+            if (!email.contains("@") || !email.contains(".")) {
+
+                Toast.makeText(
+                    this,
+                    "Please enter a valid email address",
+                    Toast.LENGTH_SHORT
+                ).show()
+
+                return@setOnClickListener
+            }
+            if (password.length < 6) {
+
+                Toast.makeText(
+                    this,
+                    "Password must be at least 6 characters long",
+                    Toast.LENGTH_SHORT
+                ).show()
+
+                return@setOnClickListener
+            }
+
             val dbHelper = DatabaseHelper(this)
 
             val success =

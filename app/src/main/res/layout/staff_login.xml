@@ -18,13 +18,7 @@
             android:background="#3F2B7B"
             android:padding="16dp">
 
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@android:drawable/ic_menu_revert"
-                app:tint="#FFFFFF"
-                android:contentDescription="Back"
-                android:layout_centerVertical="true"/>
+
 
             <TextView
                 android:layout_width="wrap_content"
@@ -73,6 +67,7 @@
                     android:padding="10dp"/>
 
                 <ImageView
+                    android:id="@+id/imgShowPassword"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:src="@android:drawable/ic_menu_view"
@@ -80,6 +75,7 @@
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
                     android:layout_marginEnd="10dp"/>
+
             </RelativeLayout>
 
             <CheckBox

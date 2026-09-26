@@ -2,7 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/system_neutral2_500"
+    android:background="#F5F5F5"
     android:fillViewport="true">
 
     <LinearLayout
@@ -37,12 +37,24 @@
             android:id="@+id/txtHelpHome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
             android:fontFamily="sans-serif-condensed"
             android:text="What can we help you with today?"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvViewAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="20dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="View My Account"
+            android:textColor="#3F2B7B"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <!-- Grid Container with Side Padding -->
