@@ -35,32 +35,37 @@ class AdminDashboardActivity : AppCompatActivity() {
 
         // Menu Items
         cardMenuItems.setOnClickListener {
-            Toast.makeText(this, "Menu Items clicked", Toast.LENGTH_SHORT).show()
-        }
+            cardMenuItems.setOnClickListener {
+                startActivity(
+                    Intent(
+                        this,
+                        MenuActivity::class.java
+                    )
+                )
+            }
+            // Low Stock Items
+            cardLowStock.setOnClickListener {
+                startActivity(Intent(this, LowInventoryActivity::class.java))
+            }
 
-        // Low Stock Items
-        cardLowStock.setOnClickListener {
-            startActivity(Intent(this, LowInventoryActivity::class.java))
-        }
+            // Bottom Menu - Orders
+            tvMenuOrders.setOnClickListener {
+                startActivity(Intent(this, StaffOrdersActivity::class.java))
+            }
 
-        // Bottom Menu - Orders
-        tvMenuOrders.setOnClickListener {
-            startActivity(Intent(this, StaffOrdersActivity::class.java))
-        }
+            // Bottom Menu - Reservations
+            tvMenuReservations.setOnClickListener {
+                startActivity(Intent(this, StaffReservationsActivity::class.java))
+            }
 
-        // Bottom Menu - Reservations
-        tvMenuReservations.setOnClickListener {
-            startActivity(Intent(this, StaffReservationsActivity::class.java))
-        }
+            // Logout
+            tvMenuLogout.setOnClickListener {
+                val intent = Intent(this, StaffLoginActivity::class.java)
+                intent.flags =
+                    Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
 
-        // Logout
-        tvMenuLogout.setOnClickListener {
-            val intent = Intent(this, StaffLoginActivity::class.java)
-            intent.flags =
-                Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
-
-            startActivity(intent)
-            finish()
+                startActivity(intent)
+                finish()
+            }
         }
-    }
-}
+    }}

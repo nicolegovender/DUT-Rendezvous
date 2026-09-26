@@ -3,6 +3,7 @@ package com.example.dutrendezvous
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import androidx.activity.ComponentActivity
 
 class ConfirmationOrderActivity : ComponentActivity() {
@@ -16,7 +17,7 @@ class ConfirmationOrderActivity : ComponentActivity() {
             findViewById<Button>(R.id.btnViewOrders)
 
         val btnHome =
-            findViewById<Button>(R.id.btnHome)
+            findViewById<TextView>(R.id.btnHome)
 
         btnViewOrders.setOnClickListener {
 

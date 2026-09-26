@@ -21,70 +21,85 @@ class LoginActivity : ComponentActivity() {
 
         val tvForgotPass = findViewById<TextView>(R.id.tvForgotPass)
         val tvRegisterLink = findViewById<TextView>(R.id.tvRegisterLink)
+        val tvStaffLogin = findViewById<TextView>(R.id.tvStaffLogin)
 
-        val registeredEmail =
-            intent.getStringExtra("REGISTERED_EMAIL")
 
-        val registeredPassword =
-            intent.getStringExtra("REGISTERED_PASSWORD")
 
         btnLogin.setOnClickListener {
+            btnLogin.setOnClickListener {
 
-            val inputEmail =
-                etEmail.text.toString()
+                val email =
+                    etEmail.text.toString().trim()
 
-            val inputPassword =
-                etPassword.text.toString()
+                val password =
+                    etPassword.text.toString().trim()
 
-            if (
-                inputEmail == registeredEmail &&
-                inputPassword == registeredPassword
-            ) {
+                val dbHelper =
+                    DatabaseHelper(this)
 
-                Toast.makeText(
-                    this,
-                    "Login Successful!",
-                    Toast.LENGTH_SHORT
-                ).show()
+                val validUser =
+                    dbHelper.checkUser(
+                        email,
+                        password
+                    )
+
+                if (validUser) {
+
+                    Toast.makeText(
+                        this,
+                        "Login Successful!",
+                        Toast.LENGTH_SHORT
+                    ).show()
+
+                    startActivity(
+                        Intent(
+                            this,
+                            HomepageActivity::class.java
+                        )
+                    )
+
+                    finish()
+
+                } else {
+
+                    Toast.makeText(
+                        this,
+                        "Invalid email or password",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+            }
+
+            tvRegisterLink.setOnClickListener {
 
                 startActivity(
                     Intent(
                         this,
-                        HomepageActivity::class.java
+                        RegisterActivity::class.java
                     )
                 )
 
                 finish()
+            }
 
-            } else {
+            tvForgotPass.setOnClickListener {
 
                 Toast.makeText(
                     this,
-                    "Incorrect email or password!",
+                    "Forgot Password feature coming soon",
                     Toast.LENGTH_SHORT
                 ).show()
             }
-        }
 
-        tvRegisterLink.setOnClickListener {
+            tvStaffLogin.setOnClickListener {
 
-            startActivity(
-                Intent(
-                    this,
-                    RegisterActivity::class.java
+                startActivity(
+                    Intent(
+                        this,
+                        StaffLoginActivity::class.java
+                    )
                 )
-            )
-
-            finish()
-        }
-
-        tvForgotPass.setOnClickListener {
-
-            Toast.makeText(
-                this,
-                "Forgot Password feature coming soon",
-                Toast.LENGTH_SHORT
-            ).show()
+            }
         }
     }
 }

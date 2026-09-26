@@ -19,7 +19,7 @@
             android:layout_marginBottom="24dp"
             android:contentDescription="checkmark"
             android:scaleType="fitCenter"
-            app:srcCompat="@drawable/checkmark" />
+            android:src="@drawable/checkmark"/>
         <TextView
             android:layout_width="249dp"
             android:layout_height="wrap_content"

@@ -32,7 +32,7 @@
                 android:adjustViewBounds="true"
                 android:contentDescription="Checkmark"
                 android:scaleType="fitCenter"
-                app:srcCompat="@drawable/checkmark" />
+                android:src="@drawable/checkmark"/>
         </LinearLayout>
 
         <TextView

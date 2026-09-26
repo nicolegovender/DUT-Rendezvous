@@ -43,13 +43,41 @@ class RegisterActivity : ComponentActivity() {
                 return@setOnClickListener
             }
 
-            val intent = Intent(this, LoginActivity::class.java)
+            val dbHelper = DatabaseHelper(this)
 
-            intent.putExtra("REGISTERED_EMAIL", email)
-            intent.putExtra("REGISTERED_PASSWORD", password)
+            val success =
+                dbHelper.insertUser(
+                    fullName,
+                    phone,
+                    email,
+                    password
+                )
 
-            startActivity(intent)
-            finish()
+            if (success) {
+
+                Toast.makeText(
+                    this,
+                    "Registration Successful!",
+                    Toast.LENGTH_SHORT
+                ).show()
+
+                startActivity(
+                    Intent(
+                        this,
+                        LoginActivity::class.java
+                    )
+                )
+
+                finish()
+
+            } else {
+
+                Toast.makeText(
+                    this,
+                    "Registration Failed",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
         }
 
         tvLoginLink.setOnClickListener {

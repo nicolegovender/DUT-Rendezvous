@@ -56,6 +56,32 @@
             android:name=".MyReservationsActivity"
             android:exported="false" />
 
+        <activity
+            android:name=".MyOrdersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StaffLoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminDashboardActivity"
+            android:exported="false" />
+
+
+        <activity
+            android:name=".StaffOrdersActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".StaffReservationsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".LowInventoryActivity"
+            android:exported="false" />
+
+
+
+
 
         <activity
             android:name=".MainActivity"
