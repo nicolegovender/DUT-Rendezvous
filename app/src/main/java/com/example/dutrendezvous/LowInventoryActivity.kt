@@ -12,21 +12,57 @@ class LowInventoryActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_low_inventory)
 
-        val itemName = findViewById<EditText>(R.id.etItemName)
-        val quantity = findViewById<EditText>(R.id.etQuantity)
-        val addButton = findViewById<Button>(R.id.btnAddItem)
-        val inventoryList = findViewById<TextView>(R.id.tvInventoryList)
+        val itemName =
+            findViewById<EditText>(R.id.etItemName)
+
+        val quantity =
+            findViewById<EditText>(R.id.etQuantity)
+
+        val addButton =
+            findViewById<Button>(R.id.btnAddItem)
+
+        val inventoryList =
+            findViewById<TextView>(R.id.tvInventoryList)
+
+        val prefs =
+            getSharedPreferences(
+                "InventoryData",
+                MODE_PRIVATE
+            )
+
+        inventoryList.text =
+            prefs.getString(
+                "inventoryList",
+                ""
+            )
 
         addButton.setOnClickListener {
 
-            val item = itemName.text.toString()
-            val qty = quantity.text.toString()
+            val item =
+                itemName.text.toString().trim()
 
-            if (item.isNotEmpty() && qty.isNotEmpty()) {
+            val qty =
+                quantity.text.toString().trim()
 
-                inventoryList.append(
-                    "\n$item - $qty left"
-                )
+            if (item.isNotEmpty() &&
+                qty.isNotEmpty()
+            ) {
+
+                val currentList =
+                    inventoryList.text.toString()
+
+                val updatedList =
+                    "$currentList\n$item - $qty left"
+
+                inventoryList.text =
+                    updatedList
+
+                prefs.edit()
+                    .putString(
+                        "inventoryList",
+                        updatedList
+                    )
+                    .apply()
 
                 itemName.text.clear()
                 quantity.text.clear()

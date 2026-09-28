@@ -3,6 +3,7 @@ package com.example.dutrendezvous
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import androidx.activity.ComponentActivity
 
 class AccountActivity : ComponentActivity() {
@@ -20,6 +21,23 @@ class AccountActivity : ComponentActivity() {
 
         val btnLogout =
             findViewById<Button>(R.id.btnLogout)
+
+        val tvAccountEmail =
+            findViewById<TextView>(R.id.tvAccountEmail)
+
+        val prefs =
+            getSharedPreferences(
+                "UserData",
+                MODE_PRIVATE
+            )
+
+        val email =
+            prefs.getString(
+                "email",
+                "Welcome to Your Account"
+            )
+
+        tvAccountEmail.text = email
 
         btnMyOrders.setOnClickListener {
 

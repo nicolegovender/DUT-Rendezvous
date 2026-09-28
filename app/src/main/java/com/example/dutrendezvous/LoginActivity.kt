@@ -87,7 +87,18 @@ class LoginActivity : ComponentActivity() {
                         "Login Successful!",
                         Toast.LENGTH_SHORT
                     ).show()
+                    val prefs =
+                        getSharedPreferences(
+                            "UserData",
+                            MODE_PRIVATE
+                        )
 
+                    prefs.edit()
+                        .putString(
+                            "email",
+                            email
+                        )
+                        .apply()
                     startActivity(
                         Intent(
                             this,
