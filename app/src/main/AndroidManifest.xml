@@ -81,6 +81,9 @@
         <activity
             android:name=".AccountActivity"
             android:exported="false" />
+        <activity
+            android:name=".AboutActivity"
+            android:exported="false" />
 
 
 

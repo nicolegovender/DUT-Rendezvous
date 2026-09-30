@@ -65,6 +65,17 @@
         android:textColor="@color/purple_200"
         android:textSize="16sp"
         android:textStyle="bold" />
+    <TextView
+        android:id="@+id/tvAboutUs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="serif"
+        android:text="About DUT Rendezvous"
+        android:textAlignment="center"
+        android:textColor="@color/purple_200"
+        android:textSize="16sp"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/btnLogin"

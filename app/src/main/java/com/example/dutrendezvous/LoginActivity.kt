@@ -27,6 +27,18 @@ class LoginActivity : ComponentActivity() {
         val tvRegisterLink = findViewById<TextView>(R.id.tvRegisterLink)
         val tvStaffLogin = findViewById<TextView>(R.id.tvStaffLogin)
 
+        val tvAboutUs =
+            findViewById<TextView>(R.id.tvAboutUs)
+        tvAboutUs.setOnClickListener {
+
+            startActivity(
+                Intent(
+                    this,
+                    AboutActivity::class.java
+                )
+            )
+        }
+
         var passwordVisible = false
 
         etPassword.setOnTouchListener { _, event ->
