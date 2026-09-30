@@ -2,13 +2,14 @@ package com.example.dutrendezvous
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.method.HideReturnsTransformationMethod
+import android.text.method.PasswordTransformationMethod
+import android.view.MotionEvent
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.ComponentActivity
-import android.text.method.HideReturnsTransformationMethod
-import android.text.method.PasswordTransformationMethod
 
 class LoginActivity : ComponentActivity() {
 
@@ -19,34 +20,38 @@ class LoginActivity : ComponentActivity() {
 
         val etEmail = findViewById<EditText>(R.id.txtLoginEmail)
         val etPassword = findViewById<EditText>(R.id.txtLoginPassword)
+
+        val btnLogin = findViewById<Button>(R.id.btnLogin)
+
+
+        val tvRegisterLink = findViewById<TextView>(R.id.tvRegisterLink)
+        val tvStaffLogin = findViewById<TextView>(R.id.tvStaffLogin)
+
         var passwordVisible = false
 
         etPassword.setOnTouchListener { _, event ->
 
             val drawableRight = 2
 
-            if (event.action == android.view.MotionEvent.ACTION_UP) {
+            if (event.action == MotionEvent.ACTION_UP) {
 
-                if (event.rawX >= (etPassword.right -
-                            etPassword.compoundDrawables[drawableRight].bounds.width())
+                if (event.rawX >= (
+                            etPassword.right -
+                                    etPassword.compoundDrawables[drawableRight].bounds.width()
+                            )
                 ) {
 
                     passwordVisible = !passwordVisible
 
                     if (passwordVisible) {
-
                         etPassword.transformationMethod =
                             HideReturnsTransformationMethod.getInstance()
-
                     } else {
-
                         etPassword.transformationMethod =
                             PasswordTransformationMethod.getInstance()
                     }
 
-                    etPassword.setSelection(
-                        etPassword.text.length
-                    )
+                    etPassword.setSelection(etPassword.text.length)
 
                     return@setOnTouchListener true
                 }
@@ -54,100 +59,81 @@ class LoginActivity : ComponentActivity() {
 
             false
         }
-        val btnLogin = findViewById<Button>(R.id.btnLogin)
 
-        val tvForgotPass = findViewById<TextView>(R.id.tvForgotPass)
-        val tvRegisterLink = findViewById<TextView>(R.id.tvRegisterLink)
-        val tvStaffLogin = findViewById<TextView>(R.id.tvStaffLogin)
-
-
-
+        // LOGIN BUTTON
         btnLogin.setOnClickListener {
-            btnLogin.setOnClickListener {
 
-                val email =
-                    etEmail.text.toString().trim()
+            val email = etEmail.text.toString().trim()
+            val password = etPassword.text.toString().trim()
 
-                val password =
-                    etPassword.text.toString().trim()
+            val dbHelper = DatabaseHelper(this)
 
-                val dbHelper =
-                    DatabaseHelper(this)
+            val validUser = dbHelper.checkUser(
+                email,
+                password
+            )
 
-                val validUser =
-                    dbHelper.checkUser(
-                        email,
-                        password
-                    )
+            if (validUser) {
 
-                if (validUser) {
+                Toast.makeText(
+                    this,
+                    "Login Successful!",
+                    Toast.LENGTH_SHORT
+                ).show()
 
-                    Toast.makeText(
-                        this,
-                        "Login Successful!",
-                        Toast.LENGTH_SHORT
-                    ).show()
-                    val prefs =
-                        getSharedPreferences(
-                            "UserData",
-                            MODE_PRIVATE
-                        )
+                val prefs = getSharedPreferences(
+                    "UserData",
+                    MODE_PRIVATE
+                )
 
-                    prefs.edit()
-                        .putString(
-                            "email",
-                            email
-                        )
-                        .apply()
-                    startActivity(
-                        Intent(
-                            this,
-                            HomepageActivity::class.java
-                        )
-                    )
-
-                    finish()
-
-                } else {
-
-                    Toast.makeText(
-                        this,
-                        "Invalid email or password",
-                        Toast.LENGTH_SHORT
-                    ).show()
-                }
-            }
-
-            tvRegisterLink.setOnClickListener {
+                prefs.edit()
+                    .putString("email", email)
+                    .apply()
 
                 startActivity(
                     Intent(
                         this,
-                        RegisterActivity::class.java
+                        HomepageActivity::class.java
                     )
                 )
 
                 finish()
-            }
 
-            tvForgotPass.setOnClickListener {
+            } else {
 
                 Toast.makeText(
                     this,
-                    "Forgot Password feature coming soon",
+                    "Invalid email or password",
                     Toast.LENGTH_SHORT
                 ).show()
             }
+        }
 
-            tvStaffLogin.setOnClickListener {
+        // REGISTER LINK
+        tvRegisterLink.setOnClickListener {
 
-                startActivity(
-                    Intent(
-                        this,
-                        StaffLoginActivity::class.java
-                    )
+            startActivity(
+                Intent(
+                    this,
+                    RegisterActivity::class.java
                 )
-            }
+            )
+
+            finish()
+        }
+
+        // FORGOT PASSWORD
+
+
+        // STAFF LOGIN
+        tvStaffLogin.setOnClickListener {
+
+            startActivity(
+                Intent(
+                    this,
+                    StaffLoginActivity::class.java
+                )
+            )
         }
     }
 }

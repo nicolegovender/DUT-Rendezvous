@@ -41,17 +41,7 @@
         android:drawableEnd="@android:drawable/ic_menu_view" />
 
 
-    <TextView
-        android:id="@+id/tvForgotPass"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:fontFamily="serif"
-        android:text="Forgot Password?"
-        android:textAlignment="center"
-        android:textColor="@color/purple_200"
-        android:textSize="16sp"
-        android:textStyle="bold" />
+
 
     <TextView
         android:id="@+id/tvRegisterLink"

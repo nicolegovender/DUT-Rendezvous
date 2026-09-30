@@ -73,6 +73,7 @@
 
             <!-- Order Item 1 -->
             <LinearLayout
+                android:id="@+id/order1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -102,6 +103,7 @@
 
             <!-- Order Item 2 -->
             <LinearLayout
+                android:id="@+id/order2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -131,6 +133,7 @@
 
             <!-- Order Item 3 -->
             <LinearLayout
+                android:id="@+id/order3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -160,6 +163,7 @@
 
             <!-- Order Item 4 -->
             <LinearLayout
+                android:id="@+id/order4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -193,6 +197,7 @@
 
             <!-- Order Item 5 -->
             <LinearLayout
+                android:id="@+id/order5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
